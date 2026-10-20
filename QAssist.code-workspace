@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../../IdeaProjects/ai-qassist/QAssist"
+		},
+		{
+			"path": "../../../Downloads/ai-quality-copilot/scripts"
+		},
+		{
+			"path": "../../../Downloads/ai-quality-copilot/data"
+		},
+		{
+			"path": "../../../Downloads/ai-quality-copilot/tests"
+		}
+	],
+	"settings": {}
+}

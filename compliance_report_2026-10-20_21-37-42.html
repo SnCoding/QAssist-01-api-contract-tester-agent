@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Swagger Compliance Report</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f5f7fb; margin: 0; padding: 40px; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        h1 { margin-top: 0; color: #1e293b; font-size: 28px; border-bottom: 2px solid #e2e8f0; padding-bottom: 15px; }
+        .meta-box { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #edf2f7; }
+        .meta-item { font-size: 14px; color: #64748b; }
+        .meta-item strong { color: #334155; }
+        .status-badge { display: inline-block; padding: 8px 16px; font-weight: bold; border-radius: 6px; font-size: 14px; text-transform: uppercase; margin-top: 5px; }
+        .status-badge.pass { background-color: #d1fae5; color: #065f46; }
+        .status-badge.fail { background-color: #fee2e2; color: #991b1b; }
+        table { width: 100%; border-collapse: collapse; margin-top: 25px; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 15px; }
+        th { background-color: #f1f5f9; color: #475569; font-weight: 600; }
+        .err-text { color: #b91c1c; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 14px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>API Contract Compliance Evaluation Report</h1>
+        <div class="meta-box">
+            <div>
+                <div class="meta-item"><strong>Swagger Spec File:</strong> my_swagger.yaml</div>
+                <div class="meta-item"><strong>Target Base URL:</strong> <a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a></div>
+                <div class="meta-item"><strong>Total Endpoints Audited:</strong> 2</div>
+            </div>
+            <div>
+                <div class="meta-item"><strong>Execution Timestamp:</strong> 20 October 2026, 09:37 PM</div>
+                <div class="meta-item"><strong>Audit Integrity Verdict:</strong><br>
+                    <span class="status-badge fail">FAILED (NON-COMPLIANT)</span>
+                </div>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 60px;">Index</th>
+                    <th>Violation Rule Tracking Breakdowns Log</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td class='err-text'>Undocumented Status Code: POST /users returned HTTP 404, which is missing from the Swagger file rules.</td></tr><tr><td>2</td><td class='err-text'>Undocumented Status Code: GET /health returned HTTP 404, which is missing from the Swagger file rules.</td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
